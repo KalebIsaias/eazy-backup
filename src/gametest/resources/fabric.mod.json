@@ -1,0 +1,15 @@
+{
+	"schemaVersion": 1,
+	"id": "eazybackup-gametest",
+	"version": "1.0.0",
+	"name": "Eazy Backup Game Tests",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": [
+			"io.github.kalebisaias.eazybackup.gametest.EazyBackupClientGameTest"
+		]
+	},
+	"depends": {
+		"eazybackup": "*"
+	}
+}
