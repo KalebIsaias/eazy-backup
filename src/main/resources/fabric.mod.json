@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "eazybackup",
+	"version": "${version}",
+	"name": "Eazy Backup",
+	"description": "Simple, native-looking world backups: automatic, on exit, on demand, with retention and restore.",
+	"authors": [
+		"KalebIsaias"
+	],
+	"contact": {
+		"homepage": "https://github.com/KalebIsaias/eazy-backup",
+		"sources": "https://github.com/KalebIsaias/eazy-backup",
+		"issues": "https://github.com/KalebIsaias/eazy-backup/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/eazybackup/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.kalebisaias.eazybackup.EazyBackup"
+		],
+		"client": [
+			"io.github.kalebisaias.eazybackup.client.EazyBackupClient"
+		],
+		"modmenu": [
+			"io.github.kalebisaias.eazybackup.client.compat.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		{
+			"config": "eazybackup.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}
